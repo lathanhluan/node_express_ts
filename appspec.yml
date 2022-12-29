@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user
+hooks:
+  # Install:
+  #   - location: ./installApp.sh
+  #     timeout: 900
+  #     runas: root
+  # AfterInstall:
+  #   - location: ./buildApp.sh
+  #     timeout: 900
+  #     runas: root
+  ApplicationStart:
+    - location: ./startApp.sh
+      timeout: 90

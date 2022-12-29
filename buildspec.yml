@@ -53,6 +53,8 @@ phases:
   artifacts:
     files:
      - dist/*
+     - appspec.yml
+     - startApp.sh
     # - location
     #name: $(date +%Y-%m-%d)
     #discard-paths: yes
