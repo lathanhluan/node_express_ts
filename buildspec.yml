@@ -54,6 +54,8 @@ artifacts:
     - dist/*
     - appspec.yml
     - startApp.sh
+    - package.json
+    - package-log.json
     # - location
     #name: $(date +%Y-%m-%d)
     #discard-paths: yes
