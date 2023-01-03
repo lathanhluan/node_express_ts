@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /dist
     destination: /home/ec2-user
 hooks:
   # Install:
@@ -14,4 +14,4 @@ hooks:
   #     runas: root
   ApplicationStart:
     - location: ./startApp.sh
-      timeout: 90
+      timeout: 300
