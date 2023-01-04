@@ -54,7 +54,8 @@ phases:
     #file-format: JunitXml | CucumberJson
 artifacts:
   files:
-    - dist/*
+    - '**/*'
+      base-directory: 'dist'
     - appspec.yml
     - startApp.sh
     - package.json
