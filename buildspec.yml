@@ -34,8 +34,8 @@ phases:
       # - command
   build:
     commands:
-      - npm install
-      - npm run build
+      #- npm install
+      # - npm run build
       # - command
   #post_build:
     #commands:
