@@ -54,12 +54,12 @@ phases:
     #file-format: JunitXml | CucumberJson
 artifacts:
   files:
-     '**/*'
-      base-directory: 'dist'
     - appspec.yml
     - startApp.sh
     - package.json
     - package-log.json
+    - '**/*'
+  base-directory: 'dist'
     # - location
     #name: $(date +%Y-%m-%d)
     #discard-paths: yes
