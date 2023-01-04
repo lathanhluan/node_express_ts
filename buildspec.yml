@@ -58,8 +58,7 @@ artifacts:
     - startApp.sh
     - package.json
     - package-log.json
-    - '**/*'
-  base-directory: 'dist'
+    - 'dist/**/*'
     # - location
     #name: $(date +%Y-%m-%d)
     #discard-paths: yes
