@@ -36,6 +36,9 @@ phases:
     commands:
       - npm install
       - npm run build
+      - ls
+      - cd /dist
+      - ls
       # - command
   #post_build:
     #commands:
