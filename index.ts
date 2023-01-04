@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req: Request, res: Response) => {
     console.log('GOI API HOME PAGE:');
-    res.send('Express + TypeScript Server AAA');
+    res.send('Express + TypeScript Server AAA 2222');
     // try {
     //     s3FetchFile.getFileFromS3().then((response) => {
     //         console.log('Output:', response.Body);
