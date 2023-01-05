@@ -4,6 +4,7 @@ import cors from 'cors';
 import {ParamsDictionary} from 'express-serve-static-core';
 import dotenv from 'dotenv';
 import s3FetchFile from './S3Service/S3FetchFile';
+const fetch = require('node-fetch');
 
 
 dotenv.config();
@@ -30,9 +31,14 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', async (req: Request, res: Response) => {
     console.log('GOI API HOME PAGE:');
-    res.send('Express + TypeScript Server AAA 2222');
+
+    const response = await fetch('http://169.254.169.254/latest/meta-data/public-ipv4');
+    const data = await response.json();
+
+    console.log(data);
+    res.send(data);
     // try {
     //     s3FetchFile.getFileFromS3().then((response) => {
     //         console.log('Output:', response.Body);
