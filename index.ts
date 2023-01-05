@@ -31,13 +31,11 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', async (req: Request, res: Response) => {
+app.get('/hello', async (req: Request, res: Response) => {
     console.log('GOI API HOME PAGE:');
 
     const response = await fetch('http://169.254.169.254/latest/meta-data/public-ipv4');
-    const data = await response.json();
-
-    console.log(data);
+    const data =  await response.text();
     res.send(data);
     // try {
     //     s3FetchFile.getFileFromS3().then((response) => {
