@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/hello', async (req: Request, res: Response) => {
-    console.log('GOI API HOME PAGE:');
+    console.log('GOI API HOME PAGE S1:');
 
     const response = await fetch('http://169.254.169.254/latest/meta-data/public-ipv4');
     const data =  await response.text();
