@@ -36,7 +36,7 @@ app.get('/hello', async (req: Request, res: Response) => {
 
     const response = await fetch('http://169.254.169.254/latest/meta-data/public-ipv4');
     const data =  await response.text();
-    res.send("The IP server: "+ data);
+    res.send("The public IP server: "+ data);
     // try {
     //     s3FetchFile.getFileFromS3().then((response) => {
     //         console.log('Output:', response.Body);
