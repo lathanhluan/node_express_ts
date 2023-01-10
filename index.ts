@@ -31,12 +31,13 @@ app.use((req, res, next) => {
     next();
 });
 
+
 app.get('/hello', async (req: Request, res: Response) => {
     console.log('GOI API HOME PAGE S1:');
 
     const response = await fetch('http://169.254.169.254/latest/meta-data/public-ipv4');
     const data =  await response.text();
-    res.send("4 PR Merged The public IP server: "+ data);
+    res.send("5 PR Merged The public IP server: "+ data);
 
     // try {
     //     s3FetchFile.getFileFromS3().then((response) => {
